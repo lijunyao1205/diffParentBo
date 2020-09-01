@@ -7,3 +7,13 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8764/users/current
+    client:
+      id: client_1
+      client-secret: 123456
+      access-token-uri: http://localhost:8764/oauth/token
+      grant-type: refresh_token,password,client_credentials
+      scope: server
